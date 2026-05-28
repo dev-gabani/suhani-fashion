@@ -33,7 +33,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--bg-primary);
+  background-color: var(--white);
   border-bottom: 1px solid var(--border-color);
   z-index: 999;
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s ease, box-shadow 0.4s ease;
@@ -44,8 +44,8 @@
 }
 
 .header-scrolled {
-  box-shadow: none;
-  background-color: rgba(246, 241, 232, 0.97);
+  box-shadow: var(--shadow-subtle);
+  background-color: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(15px);
 }
 
@@ -62,25 +62,83 @@
 /* Header rows on desktop */
 .header-top-row {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1.2fr auto 1.2fr;
   align-items: center;
   position: relative;
 }
 
-.header-logo-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.header-left-col {
   display: flex;
   align-items: center;
-  height: 50px;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Desktop Search Bar */
+.header-search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-dark);
+  padding: 8px 14px;
+  gap: 10px;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.header-search-bar:hover {
+  border-color: var(--text-muted);
+}
+
+.header-search-bar:focus-within {
+  border-color: var(--accent-luxury);
+  background-color: var(--white);
+}
+
+.header-search-bar svg {
+  width: 14px;
+  height: 14px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  stroke-width: 1.5px;
+}
+
+.header-search-input {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.header-search-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.header-logo-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
 }
 
 .header-logo {
   height: 100%;
   width: auto;
+}
+
+.hide-on-desktop {
+  display: none !important;
 }
 
 /* Centered Navigation Links */
@@ -122,7 +180,28 @@
 .header-icons {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 12px;
+}
+
+.whatsapp-link {
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  transition: var(--transition-fast);
+}
+
+.whatsapp-link:hover {
+  color: var(--accent-luxury);
+}
+
+.whatsapp-link svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.2px;
 }
 
 .header-icon-btn {
@@ -766,12 +845,21 @@
     display: flex;
   }
   
+  .header-top-row {
+    grid-template-columns: 1fr auto 1fr;
+  }
+  
+  .header-left-col {
+    justify-content: flex-start;
+  }
+
   .header-container {
     padding: 10px var(--spacing-xs);
     gap: 0;
   }
 
   .header-icons {
+    justify-content: flex-end;
     gap: 6px;
   }
 
