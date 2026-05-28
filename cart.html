@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View your SUHANI shopping bag, apply promo codes, and proceed to our premium checkout.">
+  <title>Shopping Bag | SUHANI | Made To Feel Beautiful</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cart-checkout.css">
+</head>
+<body>
+
+  <!-- Promo Bar -->
+  <div class="promo-bar">
+    Made to feel beautiful. Complimentary shipping globally.
+  </div>
+
+  <!-- High-Fashion Centered Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-top-row">
+        <!-- Burger Trigger (Mobile) -->
+        <button class="header-icon-btn mobile-menu-trigger" aria-label="Open navigation menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+
+        <!-- Centered Logo Brand Authority -->
+        <div class="header-logo-center">
+          <a href="index.html">
+            <img src="assets/logo/logo-dark.svg" alt="SUHANI Logo" class="header-logo">
+          </a>
+        </div>
+
+        <!-- Utility Icons -->
+        <div class="header-icons">
+          <button class="header-icon-btn search-trigger" aria-label="Open search overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.604 10.604z" />
+            </svg>
+          </button>
+          <a href="editorial.html" class="header-icon-btn" aria-label="About Suhani">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+          </a>
+          <button class="header-icon-btn cart-trigger" aria-label="Open shopping bag">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Centered Navigation Row -->
+      <nav class="desktop-nav">
+        <a href="collection.html?category=Sarees" class="nav-link">Sarees</a>
+        <a href="collection.html?category=Kurtis" class="nav-link">Kurtis</a>
+        <a href="collection.html?category=Co-ord Sets" class="nav-link">Co-ords</a>
+        <a href="collection.html?collection=Festive Wear" class="nav-link">Festive</a>
+        <a href="collection.html?collection=Everyday Wear" class="nav-link">Everyday</a>
+        <a href="editorial.html" class="nav-link">Our Story</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cart Page Grid -->
+  <main class="cart-page-container">
+    <h1 class="cart-title-main">Shopping Bag</h1>
+    
+    <!-- Left Column: Basket Items -->
+    <section class="cart-items-list-page" id="cart-page-items-container">
+      <!-- Loaded dynamically via cart-checkout.js -->
+    </section>
+
+    <!-- Right Column: Summary Card -->
+    <section class="summary-card" id="cart-page-summary-box">
+      <h3 class="summary-title">Summary</h3>
+      
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cart-summary-subtotal">₹0</span>
+      </div>
+      <div class="summary-row" id="summary-discount-row" style="display: none; color: var(--accent-premium);">
+        <span>Promo Discount (10%)</span>
+        <span id="cart-summary-discount">-₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Delivery</span>
+        <span style="color: var(--accent-luxury); font-weight: 500;">Complimentary</span>
+      </div>
+      <div class="summary-row">
+        <span>Taxes</span>
+        <span>Inclusive</span>
+      </div>
+      
+      <!-- Promo Code Box -->
+      <div class="promo-code-section">
+        <label for="cart-promo-code" class="input-label">Promo Code</label>
+        <div class="promo-code-wrapper">
+          <input type="text" id="cart-promo-code" class="promo-input" placeholder="Enter coupon code (SUHANI10)">
+          <button class="promo-btn" onclick="applyPromoDiscount()">Apply</button>
+        </div>
+        <p id="promo-status-msg" style="font-size: 0.75rem; margin-top: 6px; display: none;"></p>
+      </div>
+
+      <div class="summary-row total-row">
+        <span>Total</span>
+        <span class="total-amount" id="cart-summary-total">₹0</span>
+      </div>
+
+      <a href="checkout.html" class="btn btn-primary" style="margin-top: 10px;">Proceed To Checkout</a>
+      <a href="collection.html" class="btn btn-secondary">Continue Shopping</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/logo/logo-light.svg" alt="SUHANI Logo" class="footer-logo">
+        <p class="footer-desc">A premium modern Indian women's fashion label. We design slow, mindful silhouettes that whisper understated elegance.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="collection.html?category=Sarees" class="footer-link">Handloom Sarees</a></li>
+          <li><a href="collection.html?category=Kurtis" class="footer-link">Linen Kurtas</a></li>
+          <li><a href="collection.html?category=Co-ord Sets" class="footer-link">Casual Co-ords</a></li>
+          <li><a href="collection.html?collection=Festive Wear" class="footer-link">Festive Wear</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Suhani Studio</h4>
+        <ul class="footer-links">
+          <li><a href="editorial.html" class="footer-link">Our Heritage</a></li>
+          <li><a href="editorial.html" class="footer-link">Sartorial Craft</a></li>
+          <li><a href="editorial.html" class="footer-link">Sustainable Care</a></li>
+          <li><a href="editorial.html" class="footer-link">Press &amp; Campaign</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4 class="footer-title">Join The Narrative</h4>
+        <p class="footer-newsletter-text">Subscribe to receive early announcements of our limited campaign launches and editorial lookbooks.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Suhani.');">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required aria-label="Email address">
+          <button type="submit" class="newsletter-submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SUHANI STUDIOS. All Rights Reserved. Made To Feel Beautiful.</p>
+      <div class="footer-payments">
+        <img src="assets/images/visa.webp" alt="Visa">
+        <img src="assets/images/mastercard.webp" alt="Mastercard">
+        <img src="assets/images/american-express.webp" alt="American Express">
+        <img src="assets/images/paytm.webp" alt="Paytm">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawer overlays -->
+  <div class="drawer-overlay mobile-nav-overlay"></div>
+  <div class="drawer-overlay cart-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-panel drawer-left mobile-nav-drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">SUHANI</h3>
+      <button class="drawer-close-btn mobile-nav-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-items">
+      <a href="collection.html?category=Sarees" class="mobile-nav-link">Sarees</a>
+      <a href="collection.html?category=Kurtis" class="mobile-nav-link">Kurtis</a>
+      <a href="collection.html?category=Co-ord Sets" class="mobile-nav-link">Co-ord Sets</a>
+      <a href="collection.html?collection=Festive Wear" class="mobile-nav-link">Festive Wear</a>
+      <a href="collection.html?collection=Everyday Wear" class="mobile-nav-link">Everyday Wear</a>
+      <a href="editorial.html" class="mobile-nav-link">Our Story</a>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-panel drawer-right cart-drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Bag</h3>
+      <button class="drawer-close-btn cart-close" aria-label="Close bag">&times;</button>
+    </div>
+    <div class="cart-drawer-items">
+      <!-- Dynamic render items -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-drawer-summary">
+        <span class="cart-drawer-total">Subtotal</span>
+        <span class="cart-drawer-total-amount">₹0</span>
+      </div>
+      <div class="cart-drawer-cta">
+        <a href="cart.html" class="btn btn-secondary">View Shopping Bag</a>
+        <a href="checkout.html" class="btn btn-primary">Proceed To Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="search-overlay-header">
+      <span class="drawer-title">SUHANI</span>
+      <button class="drawer-close-btn search-close" aria-label="Close search">&times;</button>
+    </div>
+    <div class="search-bar-container">
+      <input type="text" placeholder="Search sarees, kurtas, co-ords..." class="search-input" aria-label="Search input text">
+    </div>
+    <div class="search-results-section">
+      <div class="search-results-grid">
+        <!-- Results injection here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Controllers -->
+  <script src="js/store.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cart-checkout.js"></script>
+</body>
+</html>

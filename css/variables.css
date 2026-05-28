@@ -1,0 +1,115 @@
+/* SUHANI FASHION - Global Variables & Base Resets (Visual Rebuild Edition) */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Color Palette (Strictly controlled, warm ivory atmosphere) */
+  --bg-primary: #F6F1E8;        /* Warm Ivory */
+  --text-primary: #2B1F1A;      /* Rich Espresso Brown */
+  --accent-premium: #6E2C3A;    /* Deep Sindoor Wine */
+  --accent-luxury: #B89A5E;     /* Antique Gold */
+  --bg-secondary: #DCCDB8;      /* Sandstone Beige */
+  --accent-soft: #C9A9A6;       /* Muted Rose */
+  
+  /* Neutrals */
+  --text-secondary: #5E4E46;    /* Soft espresso body text */
+  --text-muted: #8E7A71;        /* Muted sand-brown */
+  --bg-card: #FAF8F5;           /* Card backdrop */
+  --border-color: #E6DC CD;      /* Very soft border */
+  --border-dark: #DCCDB8;       /* Visible beige border */
+  --white: #FFFFFF;
+  --black: #000000;
+  --overlay-bg: rgba(43, 31, 26, 0.25); /* Ultra soft shade overlay */
+
+  /* Typography (Vogue-level expressiveness) */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing Scale (Highly breathing, campaign style - visual fixes) */
+  --spacing-xs: 1rem;      /* 16px */
+  --spacing-sm: 2rem;      /* 32px */
+  --spacing-md: 4.5rem;    /* 72px */
+  --spacing-lg: 8rem;      /* 128px */
+  --spacing-xl: 12rem;     /* 192px */
+  --spacing-xxl: 16rem;    /* 256px */
+
+  /* Container Boundaries */
+  --container-max-width: 1300px;
+  --container-narrow-width: 820px;
+
+  /* Slow Easing Curves (Deliberate, expensive cinematic movement) */
+  --transition-smooth: all 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: all 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 30px rgba(43, 31, 26, 0.02);
+  --shadow-medium: 0 10px 40px rgba(43, 31, 26, 0.05);
+  --shadow-luxury: 0 30px 60px rgba(43, 31, 26, 0.08);
+}
+
+/* Base Styles & Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.85; /* Increased for breathing room */
+  overflow-x: hidden;
+}
+
+/* Typography hierarchy scale increases */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+*:focus-visible {
+  outline: 1px solid var(--accent-luxury);
+  outline-offset: 4px;
+}

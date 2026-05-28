@@ -1,0 +1,735 @@
+/* SUHANI FASHION - Homepage CSS (Visual Rebuild Edition) */
+
+/* High-Impact split-screen Hero (100% Legibility, Magazine Layout) */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  background-color: var(--bg-primary);
+}
+
+.hero-split-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-image-pane {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.hero-image-pane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-text-pane {
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  border-left: 1px solid var(--border-color);
+}
+
+.hero-text-content {
+  max-width: 440px;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+  color: var(--accent-luxury);
+  display: block;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4.8rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.hero-lead-desc {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-cta {
+  display: inline-block;
+  max-width: 220px;
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: auto;
+  }
+  .hero-split-container {
+    grid-template-columns: 1fr;
+  }
+  .hero-image-pane {
+    height: 50vh;
+    min-height: 380px;
+  }
+  .hero-text-pane {
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* Brand Manifesto Section */
+.manifesto-section {
+  padding: var(--spacing-xl) var(--spacing-sm);
+  text-align: center;
+  max-width: var(--container-narrow-width);
+  margin: 0 auto;
+}
+
+.manifesto-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-luxury);
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+.manifesto-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  font-weight: 300;
+}
+
+.manifesto-body {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+  .manifesto-title {
+    font-size: 2.2rem;
+  }
+  .manifesto-body {
+    font-size: 1.25rem;
+  }
+}
+
+/* Silhouette Categories Section */
+.category-section {
+  padding: var(--spacing-lg) var(--spacing-sm);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-xs);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.section-link {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--text-primary);
+  padding-bottom: 3px;
+  transition: var(--transition-fast);
+}
+
+.section-link:hover {
+  color: var(--accent-luxury);
+  border-color: var(--accent-luxury);
+}
+
+/* Rebuilt Asymmetric Category Grid (NO OVERLAYS, 100% Readable) */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  transition: var(--transition-smooth);
+  gap: var(--spacing-xs);
+}
+
+.category-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  width: 100%;
+}
+
+.category-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-card:hover .category-image-wrapper img {
+  transform: scale(1.03);
+}
+
+.category-card-info-under {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-card-title-under {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+
+.category-card-count-under {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-luxury);
+}
+
+/* Staggered Heights */
+.tall-card .category-image-wrapper {
+  height: 640px;
+}
+
+.standard-card .category-image-wrapper {
+  height: 440px;
+}
+
+@media (min-width: 769px) {
+  .category-grid a:nth-child(2) {
+    margin-top: 100px;
+  }
+  .category-grid a:nth-child(3) {
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  .tall-card .category-image-wrapper, 
+  .standard-card .category-image-wrapper {
+    height: 420px;
+  }
+}
+
+/* Everyday vs Festive Split Campaign */
+.editorial-split-section {
+  padding: var(--spacing-xl) 0;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.editorial-split-card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: var(--spacing-xs);
+  transition: var(--transition-smooth);
+}
+
+.editorial-split-image-wrapper {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.editorial-split-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.editorial-split-card:hover .editorial-split-image-wrapper img {
+  transform: scale(1.03);
+}
+
+.editorial-split-text-block {
+  padding: var(--spacing-xs) 0 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.editorial-split-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-luxury);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.editorial-split-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.editorial-split-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  max-width: 480px;
+}
+
+.editorial-split-cta {
+  display: inline-block;
+  width: auto;
+  padding: 10px 24px;
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+}
+
+.editorial-split-cta:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+  .editorial-split-section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  .editorial-split-image-wrapper {
+    height: 450px;
+  }
+}
+
+/* Product styling */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  transition: var(--transition-smooth);
+  position: relative;
+  gap: var(--spacing-xs);
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
+}
+
+.product-image-secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.product-card:hover .product-image-primary {
+  opacity: 0;
+}
+
+.product-card:hover .product-image-secondary {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.product-badge {
+  position: absolute;
+  top: var(--spacing-xs);
+  left: var(--spacing-xs);
+  background-color: var(--accent-premium);
+  color: var(--bg-primary);
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  z-index: 2;
+}
+
+.product-badge-gold {
+  background-color: var(--accent-luxury);
+}
+
+.product-card-info {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-category-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-luxury);
+}
+
+.product-title-label {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.product-price-label {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* 2-column curated bestsellers grid */
+.curated-listing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg) var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+@media (max-width: 600px) {
+  .curated-listing-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+/* fabric craftsmanship section */
+.craftsmanship-section {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: var(--spacing-xl) auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.craftsmanship-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.craftsmanship-image-pane {
+  position: relative;
+  height: 580px;
+  overflow: hidden;
+}
+
+.craftsmanship-image-pane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.craftsmanship-grid:hover .craftsmanship-image-pane img {
+  transform: scale(1.02);
+}
+
+.craftsmanship-text-pane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background-color: var(--bg-secondary);
+}
+
+.craftsmanship-content {
+  max-width: 440px;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.craftsmanship-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-premium);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.craftsmanship-title {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.craftsmanship-desc {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.craftsmanship-cta {
+  display: inline-block;
+  width: auto;
+  padding: 10px 24px;
+  border: 1px solid var(--text-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+}
+
+.craftsmanship-cta:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+@media (max-width: 992px) {
+  .craftsmanship-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .craftsmanship-image-pane {
+    height: 400px;
+  }
+  
+  .craftsmanship-text-pane {
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+/* Instagram showcase */
+.instagram-section {
+  padding: var(--spacing-lg) var(--spacing-sm);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.instagram-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.instagram-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: var(--spacing-xs);
+}
+
+.instagram-handle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-luxury);
+  font-weight: 600;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.instagram-card {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-secondary);
+}
+
+.instagram-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.instagram-card:hover img {
+  transform: scale(1.03);
+}
+
+.instagram-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 31, 26, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: var(--bg-primary);
+  font-size: 1.2rem;
+}
+
+.instagram-card:hover .instagram-overlay {
+  opacity: 1;
+}
+
+/* Designer Letter Sign-off Section (Prevents page from feeling empty at footer transition) */
+.brand-signoff-section {
+  background-color: var(--bg-primary);
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-sm);
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-lg);
+}
+
+.signoff-container {
+  max-width: var(--container-narrow-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.signoff-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--accent-luxury);
+}
+
+.signoff-title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+
+.signoff-text {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1.95;
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+
+.signoff-signature {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-style: italic;
+  color: var(--accent-premium);
+  margin-top: var(--spacing-xs);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .signoff-title {
+    font-size: 2rem;
+  }
+  .signoff-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+}

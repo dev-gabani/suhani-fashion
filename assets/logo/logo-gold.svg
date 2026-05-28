@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="300" height="90">
+  <style>
+    .brand-name {
+      font-family: 'Cormorant Garamond', 'Didot', 'Playfair Display', Georgia, serif;
+      font-size: 48px;
+      font-weight: 300;
+      letter-spacing: 20px;
+      fill: #B89A5E;
+      text-anchor: middle;
+      text-transform: uppercase;
+    }
+    .brand-tagline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 9px;
+      fill: #2B1F1A;
+      text-anchor: middle;
+      text-transform: uppercase;
+    }
+  </style>
+  <text x="160" y="42" class="brand-name">SUHANI</text>
+  <text x="154" y="70" class="brand-tagline">MADE TO FEEL BEAUTIFUL</text>
+</svg>
