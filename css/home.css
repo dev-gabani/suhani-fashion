@@ -144,6 +144,9 @@
 }
 
 @media (max-width: 768px) {
+  .manifesto-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
   .manifesto-title {
     font-size: 2.2rem;
   }
@@ -266,6 +269,9 @@
 }
 
 @media (max-width: 768px) {
+  .category-section {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
   .category-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
@@ -580,6 +586,10 @@
 }
 
 @media (max-width: 992px) {
+  .craftsmanship-section {
+    margin: var(--spacing-lg) auto;
+  }
+  
   .craftsmanship-grid {
     grid-template-columns: 1fr;
   }
@@ -725,6 +735,10 @@
 }
 
 @media (max-width: 768px) {
+  .brand-signoff-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
   .signoff-title {
     font-size: 2rem;
   }

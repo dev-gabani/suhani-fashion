@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="300" height="90">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 90" width="450" height="90">
   <style>
     .brand-name {
       font-family: 'Cormorant Garamond', 'Didot', 'Playfair Display', Georgia, serif;
@@ -19,6 +19,6 @@
       text-transform: uppercase;
     }
   </style>
-  <text x="160" y="42" class="brand-name">SUHANI</text>
-  <text x="154" y="70" class="brand-tagline">MADE TO FEEL BEAUTIFUL</text>
+  <text x="235" y="42" class="brand-name">SUHANI</text>
+  <text x="229" y="70" class="brand-tagline">MADE TO FEEL BEAUTIFUL</text>
 </svg>

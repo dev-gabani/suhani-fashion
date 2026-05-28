@@ -26,12 +26,12 @@
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Spacing Scale (Highly breathing, campaign style - visual fixes) */
-  --spacing-xs: 1rem;      /* 16px */
-  --spacing-sm: 2rem;      /* 32px */
-  --spacing-md: 4.5rem;    /* 72px */
-  --spacing-lg: 8rem;      /* 128px */
-  --spacing-xl: 12rem;     /* 192px */
-  --spacing-xxl: 16rem;    /* 256px */
+  --spacing-xs: 0.75rem;   /* 12px */
+  --spacing-sm: 1.5rem;    /* 24px */
+  --spacing-md: 3rem;      /* 48px */
+  --spacing-lg: 5rem;      /* 80px */
+  --spacing-xl: 7.5rem;    /* 120px */
+  --spacing-xxl: 10rem;    /* 160px */
 
   /* Container Boundaries */
   --container-max-width: 1300px;

@@ -629,10 +629,10 @@
 }
 
 .footer-logo {
-  height: 75px;
+  height: 65px;
   width: auto;
   align-self: flex-start;
-  margin-left: -10px;
+  margin-left: -42px;
   margin-bottom: 8px;
 }
 
@@ -767,12 +767,30 @@
   }
   
   .header-container {
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: 10px var(--spacing-xs);
     gap: 0;
   }
 
+  .header-icons {
+    gap: 6px;
+  }
+
+  .header-icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-icon-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .header-logo-center {
-    height: 38px;
+    height: 28px;
+  }
+  
+  .hide-on-mobile {
+    display: none !important;
   }
   
   .footer-container {
